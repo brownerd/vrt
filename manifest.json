@@ -1,0 +1,21 @@
+{
+  "name": "VRT",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "VRT is an extension that creates a vertical grid over your web page. This is meant to be a tool for web typography nerds that want to work with a baseline grid.",
+  "icons": { 
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png" 
+  },
+  "browser_action": {
+    "default_icon": "icon128.png",
+    "default_popup": "index.html"
+  },  
+  "content_scripts": [
+    {
+      "matches": ["*://*/*", "file:///*/*"],
+      "js": ["index.js"]
+    }
+  ]
+}
