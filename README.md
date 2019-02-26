@@ -8,17 +8,18 @@ npm i rdmkit-vrt --save-dev
 ```
 
 ## Usage
-Display vertical grid BELOW your web page -> Press `,,`
-Display vertical grid ABOVE your web page -> Press `..` 
-Close vertical grid press -> `x`
+
+- Display vertical grid BELOW your web page -> Press `,,`
+- Display vertical grid ABOVE your web page -> Press `..` 
+- Close vertical grid press -> `x`
 
 There is an ABOVE and BELOW display option for solving two issues with vertical grids. Using BELOW is great because you can still click on the element within your web page. However, if you are using a background color or image on the body, then that would cover some if not all of the grid. Thus, you will need to display the grid ABOVE the web page. However, this will prevent you from being able to click on anything within the webpage. 
 
 
-### Below - The BELOW vertical grid is displayed in magenta
+### The BELOW vertical grid is displayed in magenta
 ![VRT example](https://github.com/brownerd/vrt/blob/master/below.png?raw=true "VRT example")
 
-### Above - The ABOVE vertical grid is displayed in blue
+### The ABOVE vertical grid is displayed in blue
 ![VRT example](https://github.com/brownerd/vrt/blob/master/above.png?raw=true "VRT example")
 
 This is intended to be used for development purposes during the "design-to-code" phase.
