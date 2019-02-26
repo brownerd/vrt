@@ -7,6 +7,15 @@ VRT is a function that creates a vertical grid over your web page. This is meant
 npm i rdmkit-vrt --save-dev
 ```
 
+You will need to specify a `line-height` and `font-size` on the root element in order for this to work.
+
+```css
+:root {
+    line-height: 1.5;
+    font-size: 20px;
+  }
+```
+
 ## Usage
 
 - Display vertical grid BELOW your web page -> Press `,,`
@@ -24,9 +33,13 @@ There is an ABOVE and BELOW display option for solving two issues with vertical 
 
 This is intended to be used for development purposes during the "design-to-code" phase.
 
-## Why?
-Developing to a strict baseline rhythm is super hard to do without a vertical baseline grid. If this is a challenge that you want to undertake, you will need a good grid to make sure that you are staying on track.
 
+### Background
+We are all free to define our CSS however we want, but I'd argue that setting `line-height` and `font-size` on the root is a best practice for web typography. The `rem` unit in css refers to root `em`s. Thus, in this example above, `1rem` is equal to `20px`. The `rem` unit looks to see what `font-size` is set on the `:root` selector, better know as the `html` selector. In other words, we are setting base typographical styles at the highest level of the document.
+
+Once a `line-height` and `font-size` are set on the `:root` selector, a *baseline height* is determined by multiplying `line-height` by `font-size`. In this case above, the baseline height equals 30px.
+
+I prefer a `line-height` of `1.5` and a `font-size` of an even number for a few reasons. One reason is that I think it looks good. It's fine if you disargee. The other reason why I follow these setting is that the math yields consistent results. When values are used that don't yield even numbers or perfect halves, then different browsers are going to handle rounding fractional numbers differently. This will throw off your baseline efforts and make managing baseline rhythm a pain in the ass. We don't want that.
 
 ## Props:
 - [How to get height of entire document with JavaScript?](https://stackoverflow.com/questions/1145850/how-to-get-height-of-entire-document-with-javascript)

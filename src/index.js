@@ -56,7 +56,7 @@ module.exports = () => {
       vrtBox.style.zIndex = 1000;
       // We are also going to give it an additional class of "above" that we can use for styling
       vrtBox.classList.add("above");
-      // console.log("ON - above");
+      console.log("ON - above");
       // Reset the keys variable to an empty array
       keys = [];
       // Set the active variable to true
