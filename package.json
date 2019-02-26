@@ -1,7 +1,7 @@
 {
-  "name": "vrt",
+  "name": "rdmkit-vrt",
   "version": "1.0.0",
-  "description": "VRT is a function that creates a vertical grid over your web page. This is meant to be a tool for web typography nerds that want to work with a baseline grid.",
+  "description": "VRT creates a vertical grid over your web page. This is meant to be a tool for web typography nerds that want to work with a baseline grid.",
   "main": "dist/index.js",
   "scripts": {
     "prebuild": "rm -rf dist",
@@ -14,6 +14,7 @@
   "keywords": ["typography"],
   "author": "Brownerd",
   "license": "ISC",
+  "repository": "https://github.com/brownerd/vrt",
   "devDependencies": {
     "parcel-bundler": "^1.11.0",
     "rimraf": "^2.6.3"
