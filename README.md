@@ -38,7 +38,7 @@ Developing to a strict baseline rhythm is super hard to do without a vertical ba
 - [CSSPlus](https://csspl.us/#aspecty)
 - [Round number up to the nearest multiple of 3](https://stackoverflow.com/questions/3254047/round-number-up-to-the-nearest-multiple-of-3)
 
-## Article on Vertical Rhythm
+## Articles on Vertical Rhythm
 - [Compose to a Vertical Rhythm](https://24ways.org/2006/compose-to-a-vertical-rhythm)
 - [The Elements of Typographic Style Applied to the Web](http://webtypography.net/intro/)
 - [SNAP TO BASE-LINE](https://codepen.io/brownerd/pen/9ef805a6240083fb267d3faf3d08f440)
