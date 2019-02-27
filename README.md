@@ -49,7 +49,7 @@ I prefer a `line-height` of `1.5` and a `font-size` of an even number for a few 
 
 Another thing to notice is that the basline isn't showing at the bottom of the text. It's showing inbetween lines of text. The web works in a different nature than print does. Everything in HTML creates a bounding box. A paragraph tag is a box that holds text. Every word and character on the page is bound by a text box too. As a result, our text is always going to fit squarely inside that box. So this VRT grid seeks to handle the baseline as it applies to the web and not as it applies to print.  
 
-This will be enough to get you going, but eventually, you will find that images and responsive settings make folling a strict vertical grid impossible. For that problem I've created another module to resize images to the nears multiple of the baseline unit. Thus, enabling us to keep the rhythm that we want. Look at using the [RDM]() module to help with that. 
+This will be enough to get you going, but eventually, you will find that images and responsive settings make folling a strict vertical grid impossible. For that problem I've created another module to resize images to the nears multiple of the baseline unit. Thus, enabling us to keep the rhythm that we want. Look at using the [RDM](https://github.com/brownerd/rdm) module to help with that. 
 
 
 ## Articles on Vertical Rhythm
