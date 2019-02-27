@@ -40,15 +40,16 @@ module.exports = () => {
   function toggleVrtGrid(e) {
     const vrtGridAbove = "188,188"; // "38,38"; // up arrow, up arrow  //"188,188"; //  ,,
     const vrtGridBelow = "190,190"; // "40,40"; // down arrow, down arrow
-    const vrtGridOff = "88"; // x   // "190"; //  .
+    const vrtGridOff = "191"; // "88"; // x   // "190"; //  .
     // const vrtGridOff = "190"; //  .
 
     keys.push(e.keyCode);
 
     // Check to see if the user wants the grid to be placed on a layer above the web page
-    if (keys.toString().includes(vrtGridAbove)) {
+    if (keys.toString().includes(vrtGridAbove) && active === false) {
       // We need to run this function everytime the grid is activated
       // because we need to recalculate the window height if the user has changed the browser width
+      // console.log(keys.toString());
       makeVrtGrid();
       // Now we can append the grid to the body
       document.body.appendChild(vrtBox);
@@ -56,25 +57,28 @@ module.exports = () => {
       vrtBox.style.zIndex = 1000;
       // We are also going to give it an additional class of "above" that we can use for styling
       vrtBox.classList.add("above");
-      console.log("ON - above");
       // Reset the keys variable to an empty array
       keys = [];
       // Set the active variable to true
       active = true;
-    } else if (keys.toString().includes(vrtGridBelow)) {
+      //console.log(`ON - above ${active}`);
+    } else if (keys.toString().includes(vrtGridBelow) && active === false) {
       makeVrtGrid();
       document.body.appendChild(vrtBox);
       vrtBox.style.zIndex = -1000;
       vrtBox.classList.remove("above");
-      console.log("ON - below");
       keys = [];
       active = true;
-    } else if (keys.toString().includes(vrtGridOff) && active) {
+      //console.log(`ON - below ${active}`);
+    } else if (keys.toString().includes(vrtGridOff) && active === true) {
+      //console.log("x pressed", keys.toString());
+      vrtBox.classList.remove("above");
       document.body.removeChild(vrtBox);
-      // console.log("OFF");
       keys = [];
       active = false;
+      //console.log(`OFF ${active}`);
     } else {
+      //console.log("ignore");
       return;
     }
   }
