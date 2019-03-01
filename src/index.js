@@ -84,7 +84,7 @@ module.exports = () => {
     // Now we can append the grid to the body
     document.body.appendChild(vrtBox);
     // Here we give it a z-index of 1000, hopefully this is high enough above everything
-    vrtBox.style.zIndex = 1000;
+    vrtBox.style.zIndex = -1000;
     // We are also going to give it an additional class of "above" that we can use for styling
     vrtBox.classList.add("below");
     // Reset the keys variable to an empty array
