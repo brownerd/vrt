@@ -47,40 +47,60 @@ module.exports = () => {
 
     // Check to see if the user wants the grid to be placed on a layer above the web page
     if (keys.toString().includes(vrtGridAbove) && active === false) {
-      // We need to run this function everytime the grid is activated
-      // because we need to recalculate the window height if the user has changed the browser width
-      // console.log(keys.toString());
-      makeVrtGrid();
-      // Now we can append the grid to the body
-      document.body.appendChild(vrtBox);
-      // Here we give it a z-index of 1000, hopefully this is high enough above everything
-      vrtBox.style.zIndex = 1000;
-      // We are also going to give it an additional class of "above" that we can use for styling
-      vrtBox.classList.add("above");
-      // Reset the keys variable to an empty array
-      keys = [];
-      // Set the active variable to true
-      active = true;
-      //console.log(`ON - above ${active}`);
+      aboveGrid();
     } else if (keys.toString().includes(vrtGridBelow) && active === false) {
-      makeVrtGrid();
-      document.body.appendChild(vrtBox);
-      vrtBox.style.zIndex = -1000;
-      vrtBox.classList.remove("above");
-      keys = [];
-      active = true;
-      //console.log(`ON - below ${active}`);
+      belowGrid();
     } else if (keys.toString().includes(vrtGridOff) && active === true) {
-      //console.log("x pressed", keys.toString());
-      vrtBox.classList.remove("above");
-      document.body.removeChild(vrtBox);
-      keys = [];
-      active = false;
-      //console.log(`OFF ${active}`);
+      closeGrid();
     } else {
       //console.log("ignore");
       return;
     }
+  }
+
+  function aboveGrid() {
+    // We need to run this function everytime the grid is activated
+    // because we need to recalculate the window height if the user has changed the browser width
+    // console.log(keys.toString());
+    makeVrtGrid();
+    // Now we can append the grid to the body
+    document.body.appendChild(vrtBox);
+    // Here we give it a z-index of 1000, hopefully this is high enough above everything
+    vrtBox.style.zIndex = 1000;
+    // We are also going to give it an additional class of "above" that we can use for styling
+    vrtBox.classList.add("above");
+    // Reset the keys variable to an empty array
+    keys = [];
+    // Set the active variable to true
+    active = true;
+    //console.log(`ON - above ${active}`);
+  }
+
+  function belowGrid() {
+    // We need to run this function everytime the grid is activated
+    // because we need to recalculate the window height if the user has changed the browser width
+    // console.log(keys.toString());
+    makeVrtGrid();
+    // Now we can append the grid to the body
+    document.body.appendChild(vrtBox);
+    // Here we give it a z-index of 1000, hopefully this is high enough above everything
+    vrtBox.style.zIndex = 1000;
+    // We are also going to give it an additional class of "above" that we can use for styling
+    vrtBox.classList.add("below");
+    // Reset the keys variable to an empty array
+    keys = [];
+    // Set the active variable to true
+    active = true;
+    //console.log(`ON - above ${active}`);
+  }
+
+  function closeGrid() {
+    //console.log("x pressed", keys.toString());
+    vrtBox.classList.remove("above");
+    document.body.removeChild(vrtBox);
+    keys = [];
+    active = false;
+    //console.log(`OFF ${active}`);
   }
 
   // console.log(lh);
@@ -126,4 +146,6 @@ module.exports = () => {
   styleElem.appendChild(styleNode);
   // Append the styleElement to the head tag
   document.head.appendChild(styleElem);
+
+  return { aboveGrid, belowGrid, closeGrid };
 };
