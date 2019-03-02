@@ -74,3 +74,5 @@ This will be enough to get you going, but eventually, you will find that images 
 - [Aspect Ratio Boxes](https://css-tricks.com/aspect-ratio-boxes/)
 - [CSSPlus](https://csspl.us/#aspecty)
 - [Round number up to the nearest multiple of 3](https://stackoverflow.com/questions/3254047/round-number-up-to-the-nearest-multiple-of-3)
+- [What is the difference between 'remove' and 'removeChild' method is javascript?](https://stackoverflow.com/questions/36998877/what-is-the-difference-between-remove-and-removechild-method-is-javascript)
+- [Remove all child elements of a DOM node in JavaScript](https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript)

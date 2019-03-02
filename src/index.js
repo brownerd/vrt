@@ -96,6 +96,11 @@ module.exports = () => {
 
   function closeGrid() {
     //console.log("x pressed", keys.toString());
+
+    while (vrtBox.firstChild) {
+      vrtBox.removeChild(vrtBox.firstChild);
+    }
+
     vrtBox.classList.remove("above");
     document.body.removeChild(vrtBox);
     keys = [];
