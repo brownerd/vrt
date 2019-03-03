@@ -1,6 +1,6 @@
 {
   "name": "rdmkit-vrt",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "VRT creates a vertical grid over your web page. This is meant to be a tool for web typography nerds that want to work with a baseline grid.",
   "main": "dist/index.js",
   "scripts": {

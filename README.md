@@ -18,9 +18,9 @@ You will need to specify a `line-height` and `font-size` on the `:root` selector
 
 ## Usage
 
-- Display vertical grid BELOW your web page -> Press `,,`
-- Display vertical grid ABOVE your web page -> Press `..` 
-- Close vertical grid press -> `x`
+- Display VRT grid BELOW your web page -> Press `,,`
+- Display VRT grid ABOVE your web page -> Press `..` 
+- Close VRT grid press -> `/`
 
 There is an ABOVE and BELOW display option for solving two issues with vertical grids. Putting the grid below is great, but you can't see it if you have a background color or image set on any elements. Displaying the grid ABOVE the web page is good, but then you can't select any of the elements below the grid. So, you kind of need both to get the job done reliably.  
 
