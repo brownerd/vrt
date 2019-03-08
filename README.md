@@ -16,6 +16,30 @@ You will need to specify a `line-height` and `font-size` on the `:root` selector
   }
 ```
 
+Now call VRT from your frontend js file.
+```js
+// index.js
+vrt();
+```
+
+### Options
+You can also change the gridline colors and the shortcut key to open and close the grid. So, use the colors that work with your backgrounds and the keys that you prefer.
+
+```js
+// index.js
+
+// You must specify this before you call the `vrt()` function. This is because the vrt function has it's own defaults, so it doesn't need to wait for options object if it hasn't been assigned before the function fires.
+const options = {
+  belowColor: "cyan",
+  aboveColor: "indigo",
+  aboveKey: "38,38", //  upArrow
+  belowKey: "40,40", //  downArrow
+  closeKey: "88"     //  x
+}
+// Just pass this options object in to the vrt function.
+vrt(options);
+```
+
 ## Usage
 
 - Display VRT grid BELOW your web page -> Press `,,`
@@ -32,6 +56,7 @@ There is an ABOVE and BELOW display option for solving two issues with vertical 
 ![VRT example](https://github.com/brownerd/vrt/blob/master/above.png?raw=true "VRT example")
 
 This is intended to be used for development purposes during the "design-to-code" phase.
+
 
 
 ### Background

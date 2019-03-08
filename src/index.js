@@ -1,12 +1,12 @@
-module.exports = (
-  options = {
+module.exports = opts => {
+  let defaults = {
     belowColor: "hsla(300deg,100%,50%, 1)",
     aboveColor: "hsla(200deg,100%,50%, 1)",
     aboveKey: "188,188",
     belowKey: "190,190",
     closeKey: "191"
-  }
-) => {
+  };
+  let options = Object.assign({}, defaults, opts);
   // Make a box to display the vrt grid
   const vrtBox = document.createElement("div");
   vrtBox.classList.add("vrt__box");

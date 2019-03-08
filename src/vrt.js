@@ -1,10 +1,16 @@
 import vrt from "./index.js";
-vrt();
 
-// const options = {
-//   belowColor: "pink",
-//   aboveColor: "indigo",
-//   aboveKey: "188,188",
-//   belowKey: "190,190",
-//   closeKey: "191"
-// }
+const options = {
+  belowColor: "pink",
+  aboveColor: "indigo",
+  aboveKey: "38,38",
+  belowKey: "40,40",
+  closeKey: "88"
+};
+
+const options2 = {
+  belowColor: "green",
+  aboveColor: "orange"
+};
+
+vrt();
