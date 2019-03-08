@@ -56,7 +56,7 @@ This will be enough to get you going, but eventually, you will find that images 
 
 ## Articles on Vertical Rhythm
 - [Compose to a Vertical Rhythm](https://24ways.org/2006/compose-to-a-vertical-rhythm)
-- [The Elements of Typographic Style Applied to the Web](http://webtypography.net/intro/)
+- [The Elements of Typographic Style Applied to the Web](http://webtypography.net/intro/)gs
 - [BASELINE](https://shalanah.github.io/baseline/)
 - [Responsive Vertical Rhythm with CSS Custom Properties and CSS Calc](https://zellwk.com/blog/responsive-vertical-rhythm/)
 - [8-Point Grid: Vertical Rhythm](https://builttoadapt.io/8-point-grid-vertical-rhythm-90d05ad95032)

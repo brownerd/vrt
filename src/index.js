@@ -1,4 +1,12 @@
-module.exports = () => {
+module.exports = (
+  options = {
+    belowColor: "hsla(300deg,100%,50%, 1)",
+    aboveColor: "hsla(200deg,100%,50%, 1)",
+    aboveKey: "188,188",
+    belowKey: "190,190",
+    closeKey: "191"
+  }
+) => {
   // Make a box to display the vrt grid
   const vrtBox = document.createElement("div");
   vrtBox.classList.add("vrt__box");
@@ -38,9 +46,9 @@ module.exports = () => {
   document.addEventListener("keydown", toggleVrtGrid);
 
   function toggleVrtGrid(e) {
-    const vrtGridAbove = "188,188"; // "38,38"; // up arrow, up arrow  //"188,188"; //  ,,
-    const vrtGridBelow = "190,190"; // "40,40"; // down arrow, down arrow
-    const vrtGridOff = "191"; // "88"; // x   // "190"; //  .
+    const vrtGridAbove = options.aboveKey; // "188,188"; // ,, // "38,38"; // up arrow, up arrow
+    const vrtGridBelow = options.belowKey; //"190,190"; // "40,40"; // down arrow, down arrow
+    const vrtGridOff = options.closeKey; // "191"; // "88"; // x   // "190"; //  .
     // const vrtGridOff = "190"; //  .
 
     keys.push(e.keyCode);
@@ -135,11 +143,11 @@ module.exports = () => {
     }
 
     .vrt__row {
-      box-shadow: inset 0px -1px 0px hsla(300deg,100%,50%, 1);
+      box-shadow: inset 0px -1px 0px ${options.belowColor};
     }
     
     .vrt__box.above .vrt__row {
-      box-shadow: inset 0px -1px 0px hsla(200deg,100%,50%, 1);
+      box-shadow: inset 0px -1px 0px ${options.aboveColor};
     }
   `;
 
